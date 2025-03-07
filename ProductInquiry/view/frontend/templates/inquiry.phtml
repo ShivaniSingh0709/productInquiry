@@ -4,7 +4,7 @@
  */
 $product = $block->getCurrentProduct();
 ?>
-<form action="<?= $escaper->escapeUrl($block->getUrl('productInquiry/index/index')) ?>" method="post">
+<form action="<?= $escaper->escapeUrl($block->getUrl('productInquiry/index/index')) ?>" method="post" data-mage-init='{"validation": {}}'>
 <input type="hidden" name="form_key" value="<?= /* @noEscape */ $escaper->escapeHtml($block->getFormKey()) ?>" />
 <input type="hidden" name="product_id" value="<?= /* @noEscape */ $escaper->escapeHtml($product->getId()) ?>" />
 
