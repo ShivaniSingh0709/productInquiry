@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework/Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="product_inquiry" resource="default" engine="innodb" comment="Product Inquiry Table">
+        
+        <!-- Primary Key -->
+        <column name="inquiry_id" xsi:type="int" unsigned="true" nullable="false" identity="true" comment="Inquiry ID"/>
+        
+        <!-- Product Details -->
+        <column name="product_id" xsi:type="int" unsigned="true" nullable="false" comment="Product ID"/>
+        <column name="sku" xsi:type="varchar" length="255" nullable="false" comment="Product SKU"/>
+        
+        <!-- Customer Details -->
+        <column name="customer_name" xsi:type="varchar" length="255" nullable="false" comment="Customer Name"/>
+        <column name="customer_email" xsi:type="varchar" length="255" nullable="false" comment="Customer Email"/>
+        
+        <!-- Inquiry Details -->
+        <column name="inquiry_subject" xsi:type="varchar" length="255" nullable="false" comment="Inquiry Subject"/>
+        <column name="inquiry_message" xsi:type="text" nullable="false" comment="Inquiry Message"/>
+        
+        <!-- Timestamps -->
+        <column name="created_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        
+        <!-- Primary Key Constraint -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="inquiry_id"/>
+        </constraint>
+        
+    </table>
+</schema>

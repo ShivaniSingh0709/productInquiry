@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vendor_ProductInquiry::manager" title="Product Inquiry" module="Vendor_ProductInquiry" sortOrder="10" resource="Vendor_ProductInquiry::manager"/>
+        <add id="Vendor_ProductInquiry::inquiry" title="Manage" module="Vendor_ProductInquiry" sortOrder="0" parent="Vendor_ProductInquiry::manager"
+                action="productinquiry/inquiry" resource="Vendor_ProductInquiry::inquiry"/>
+    </menu>
+</config>
