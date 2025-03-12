@@ -77,16 +77,16 @@ class EmailHelper extends AbstractHelper
             ];
 
             // Render the email template
-            $transport = $this->transportBuilder
-                ->setTemplateIdentifier('product_inquiry_email_template') // Email template ID
-                ->setTemplateOptions([
-                    'area' => \Magento\Framework\App\Area::AREA_FRONTEND,
-                    'store' => $store->getId(),
-                ])
-                ->setTemplateVars($templateVars)
-                ->setFromByScope('general') // Use Magento's general email settings
-                ->addTo('abc@gmail.com') // Admin Email (placeholder)
-                ->getTransport();
+            // $transport = $this->transportBuilder
+            //     ->setTemplateIdentifier('product_inquiry_email_template') // Email template ID
+            //     ->setTemplateOptions([
+            //         'area' => \Magento\Framework\App\Area::AREA_FRONTEND,
+            //         'store' => $store->getId(),
+            //     ])
+            //     ->setTemplateVars($templateVars)
+            //     ->setFromByScope('general') // Use Magento's general email settings
+            //     ->addTo('abc@gmail.com') // Admin Email (placeholder)
+            //     ->getTransport();
 
             // Send email
             $transport->sendMessage();
