@@ -89,7 +89,7 @@ class EmailHelper extends AbstractHelper
             //     ->getTransport();
 
             // Send email
-            $transport->sendMessage();
+            // $transport->sendMessage();
             $adminMessage = sprintf(
                 "New Product Inquiry:\n\nName: %s\nEmail: %s\nSubject: %s\nProduct SKU: %s\nMessage: %s",
                 $data['customer_name'] ?? '',
